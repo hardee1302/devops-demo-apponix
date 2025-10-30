@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.*;
 
 @SpringBootApplication
 @RestController
-public class Application {
+public class DemoApplication {
+
     @GetMapping("/")
     public String hello() {
         return "Hello from CI/CD Pipeline!";
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 }
