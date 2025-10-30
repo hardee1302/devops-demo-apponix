@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-demo
+  name: demo-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops-demo
+      app: demo
   template:
     metadata:
       labels:
-        app: devops-demo
+        app: demo
     spec:
       containers:
-        - name: devops-demo
-          image: devops-demo:latest
+        - name: demo
+          image: demo-app:latest
           ports:
             - containerPort: 8080
